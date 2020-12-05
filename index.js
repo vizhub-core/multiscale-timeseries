@@ -8,6 +8,7 @@ const intervals = [
   { property: 'months', format: timeFormat('%Y-%m') },
   { property: 'quarters', format: timeFormat('%Y-Q%q') },
   { property: 'years', format: timeFormat('%Y') },
+  { property: 'all', format: () => 'all' },
 ];
 
 const increment = (record = {}, date, maxEntries) =>

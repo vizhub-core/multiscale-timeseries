@@ -27,6 +27,7 @@ assert.deepEqual(record, {
   months: { '2020-10': 1 },
   quarters: { '2020-Q4': 1 },
   years: { 2020: 1 },
+  all: { all: 1 },
 });
 ```
 
@@ -48,6 +49,7 @@ assert.deepEqual(record, {
   quarters: { '2020-Q4': 5 },
   weeks: { '2020-W41': 2, '2020-W49': 3 },
   years: { 2020: 5 },
+  all: { all: 5 },
 });
 ```
 
@@ -59,14 +61,28 @@ A script (`sizeEstimator.js` in this repo) was developed that simulates updating
 
 | `maxEntries` | Kilobytes |
 | ----------- | ----------- |
-|16|2 KB|
-|32|3 KB|
-|64|5 KB|
-|128|9 KB|
-|256|15 KB|
-|512|27 KB|
-|1024|46 KB|
-|2048|85 KB|
-|4096|163 KB|
-|8192|319 KB|
-
+|10|2 KB|
+|20|2 KB|
+|30|3 KB|
+|40|4 KB|
+|50|4 KB|
+|60|5 KB|
+|70|5 KB|
+|80|6 KB|
+|90|6 KB|
+|100|7 KB|
+|150|10 KB|
+|200|12 KB|
+|250|15 KB|
+|300|18 KB|
+|350|20 KB|
+|400|23 KB|
+|450|25 KB|
+|500|26 KB|
+|600|30 KB|
+|700|34 KB|
+|800|38 KB|
+|900|42 KB|
+|1000|45 KB|
+|1500|65 KB|
+|2000|84 KB|

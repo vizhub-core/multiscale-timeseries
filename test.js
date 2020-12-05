@@ -15,6 +15,7 @@ describe('Multiscale Timeseries', () => {
         months: { '2020-10': 1 },
         quarters: { '2020-Q4': 1 },
         years: { 2020: 1 },
+        all: { all: 1 },
       });
       record = increment(record, date);
       assert.deepEqual(record, {
@@ -25,6 +26,7 @@ describe('Multiscale Timeseries', () => {
         months: { '2020-10': 2 },
         quarters: { '2020-Q4': 2 },
         years: { 2020: 2 },
+        all: { all: 2 },
       });
     });
     it('should increment a timeseries record for another date', () => {
@@ -38,6 +40,7 @@ describe('Multiscale Timeseries', () => {
         quarters: { '2020-Q4': 3 },
         weeks: { '2020-W41': 2, '2020-W49': 1 },
         years: { 2020: 3 },
+        all: { all: 3 },
       });
       record = increment(record, date);
       assert.deepEqual(record, {
@@ -48,6 +51,7 @@ describe('Multiscale Timeseries', () => {
         quarters: { '2020-Q4': 4 },
         weeks: { '2020-W41': 2, '2020-W49': 2 },
         years: { 2020: 4 },
+        all: { all: 4 },
       });
     });
     it('should age out old entries', () => {
@@ -61,6 +65,7 @@ describe('Multiscale Timeseries', () => {
         quarters: { '2020-Q4': 5 },
         weeks: { '2020-W41': 2, '2020-W49': 3 },
         years: { 2020: 5 },
+        all: { all: 5 },
       });
     });
   });
