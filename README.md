@@ -6,7 +6,7 @@ Why? The problem at hand is to record analytics for various events such as page 
  * Age out data to maintain an upper bound on storage for each timeseries record.
  * Persist the timeseries as JSON.
 
-Example usage:
+## Example Usage
 
 ```js
 const date = new Date('2020-10-05T14:32:40.441Z');
@@ -48,3 +48,23 @@ assert.deepEqual(record, {
   years: { 2020: 5 },
 });
 ```
+
+## What should maxEntries be?
+
+The point of this library is to have an upper bound on the size of a multiscale timeseries record, regardless of how many times it is incremented. It begs the question, how does `maxEntries` relate to the size in Kilobytes of the record stored on disk?
+
+A script (`sizeEstimator.js` in this repo) was developed that simulates updating a timeseries record every hour for one year, using various values for `maxEntries`, and estimating the size of the output as stringified JSON. Here is the output of that script:
+
+| `maxEntries` | Kilobytes |
+| ----------- | ----------- |
+|16|2 KB|
+|32|3 KB|
+|64|5 KB|
+|128|9 KB|
+|256|15 KB|
+|512|27 KB|
+|1024|46 KB|
+|2048|85 KB|
+|4096|163 KB|
+|8192|319 KB|
+

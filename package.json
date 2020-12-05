@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "prettier": "prettier --single-quote --write *.js"
+    "prettier": "prettier --single-quote --write *.js",
+    "sizeEstimator": "node sizeEstimator.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
   },
   "homepage": "https://github.com/curran/multiscale-timeseries#readme",
   "devDependencies": {
+    "d3-time": "^2.0.0",
     "mocha": "^8.2.1",
     "prettier": "^2.2.1"
   },

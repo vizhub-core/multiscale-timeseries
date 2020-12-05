@@ -1,5 +1,5 @@
 const assert = require('assert');
-const { initialize, increment } = require('./index');
+const { increment } = require('./index');
 
 describe('Multiscale Timeseries', () => {
   describe('increment()', () => {
