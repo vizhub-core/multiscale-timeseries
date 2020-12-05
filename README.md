@@ -9,9 +9,11 @@ Why? The problem at hand is to record analytics for various events such as page 
 Example usage:
 
 ```js
+const { increment } = require('multiscale-timeseries');
+
 const date = new Date('2020-10-05T14:32:40.441Z');
 const maxEntries = 1,000; // Max entries governing age-out for each interval.
-const record = {};
+const record = {}; // Can be an empty object or existing record.
 
 // This is the main call - increment a timeseries record based on a date.
 const record = increment(record, date, maxEntries);
@@ -28,7 +30,7 @@ assert.deepEqual(record, {
 });
 ```
 
-Once a record exists, you can increment it again and again. After accumulating `maxEntries` entries for any given interval (`hours` for example would max out first), the oldest of the entries are deleted.
+Once a record exists, you can increment it again and again. After accumulating `maxEntries` entries for any given interval, the oldest of the entries are deleted.  For example `hours` entries would be the first to age out.
 
 After incrementing many times, you end up with a record that looks like this:
 
