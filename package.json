@@ -1,0 +1,27 @@
+{
+  "name": "multiscale-timeseries",
+  "version": "1.0.0",
+  "description": "Small utility for maintaining multi-scale timeseries records",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "prettier": "prettier --single-quote --write *.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/curran/multiscale-timeseries.git"
+  },
+  "keywords": [
+    "timeseries"
+  ],
+  "author": "Curran Kelleher",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/curran/multiscale-timeseries/issues"
+  },
+  "homepage": "https://github.com/curran/multiscale-timeseries#readme",
+  "devDependencies": {
+    "mocha": "^8.2.1",
+    "prettier": "^2.2.1"
+  }
+}
