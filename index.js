@@ -10,16 +10,25 @@ const intervals = [
   { property: 'years', format: timeFormat('%Y') },
 ];
 
-const increment = (record = {}, date) => {
+const increment = (record = {}, date, maxEntries) => {
   return intervals.reduce((accumulator, { property, format }) => {
     const key = format(date);
-    return {
+
+    const newRecord = {
       ...accumulator,
       [property]: {
         ...record[property],
         [key]: ((record[property] && record[property][key]) || 0) + 1,
       },
     };
+
+    // Age out old entries.
+    const keys = Object.keys(newRecord[property]);
+    if (keys.length > maxEntries) {
+      delete newRecord[property][keys[0]];
+    }
+
+    return newRecord;
   }, record);
 };
 

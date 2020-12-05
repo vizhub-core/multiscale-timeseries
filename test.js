@@ -50,5 +50,37 @@ describe('Multiscale Timeseries', () => {
         years: { 2020: 4 },
       });
     });
+    it('should age out old entries', () => {
+      const date = new Date('2020-12-06T14:32:40.441Z');
+      record = increment(record, date, 2);
+      assert.deepEqual(record, {
+        days: {
+          '2020-12-05': 2,
+          '2020-12-06': 1,
+        },
+        hours: {
+          '2020-12-05T09': 2,
+          '2020-12-06T09': 1,
+        },
+        minutes: {
+          '2020-12-05T09:32': 2,
+          '2020-12-06T09:32': 1,
+        },
+        months: {
+          '2020-10': 2,
+          '2020-12': 3,
+        },
+        quarters: {
+          '2020-Q4': 5,
+        },
+        weeks: {
+          '2020-W41': 2,
+          '2020-W49': 3,
+        },
+        years: {
+          2020: 5,
+        },
+      });
+    });
   });
 });
