@@ -1,10 +1,11 @@
 # multiscale-timeseries
 Small utility for maintaining multi-scale timeseries records.
 
-Why? The problem at hand is to record analytics for various events such as page views, user logins, and usage of features for a SAAS product. This library was created out of the need for a lightweight solution that has the following properties:
+Why? The problem at hand is to record analytics for various events such as page views, user logins, and usage of features for a Web-based software product. This library was created out of the need for a lightweight solution that has the following properties:
  * Represent multiple levels of detail including hours, days, weeks, months, quarters, and years.
  * Age out data to maintain an upper bound on storage for each timeseries record.
  * Persist the timeseries as JSON.
+ * Access the analytics data for presentation within the product.
 
 ## Example Usage
 
