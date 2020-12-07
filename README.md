@@ -86,3 +86,6 @@ A script (`sizeEstimator.js` in this repo) was developed that simulates updating
 |1000|45 KB|
 |1500|65 KB|
 |2000|84 KB|
+
+## FAQ
+ * Why not just use Google Analytics? With `multiscale-timeseries` and any lightweight data store, you can roll your own analytics and _have full access to the data_, so you can present it in your product directly. Other than that, Google Analytics is a perfectly good solution.
