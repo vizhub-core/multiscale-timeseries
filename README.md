@@ -1,10 +1,11 @@
 # multiscale-timeseries
 Small utility for maintaining multi-scale timeseries records.
 
-Why? The problem at hand is to record analytics for various events such as page views, user logins, and usage of features for a SAAS product. This library was created out of the need for a lightweight solution that has the following properties:
+Why? The problem at hand is to record analytics for various events such as page views, user logins, and usage of features for a Web-based software product. This library was created out of the need for a lightweight solution that has the following properties:
  * Represent multiple levels of detail including hours, days, weeks, months, quarters, and years.
  * Age out data to maintain an upper bound on storage for each timeseries record.
  * Persist the timeseries as JSON.
+ * Access the analytics data for presentation within the product.
 
 ## Example Usage
 
@@ -86,3 +87,6 @@ A script (`sizeEstimator.js` in this repo) was developed that simulates updating
 |1000|45 KB|
 |1500|65 KB|
 |2000|84 KB|
+
+## FAQ
+ * Why not just use Google Analytics? With `multiscale-timeseries` and any lightweight data store, you can roll your own analytics and _have full access to the data_, so you can present it in your product directly. Other than that, Google Analytics is a perfectly good solution.
