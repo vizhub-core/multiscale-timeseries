@@ -11,7 +11,7 @@ const intervals = [
   { property: 'all', format: () => 'all' },
 ];
 
-const increment = (record = {}, date, maxEntries) =>
+const increment = (record = {}, date, maxEntries = 90) =>
   intervals.reduce((accumulator, { property, format }) => {
     // Derive the key for this particular date and interval.
     const key = format(date);
