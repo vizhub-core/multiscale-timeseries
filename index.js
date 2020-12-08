@@ -1,13 +1,13 @@
-const { timeFormat } = require('d3-time-format');
+const { utcFormat } = require('d3-time-format');
 
 const intervals = [
-  { property: 'minutes', format: timeFormat('%Y-%m-%dT%H:%M') },
-  { property: 'hours', format: timeFormat('%Y-%m-%dT%H') },
-  { property: 'days', format: timeFormat('%Y-%m-%d') },
-  { property: 'weeks', format: timeFormat('%Y-W%V') },
-  { property: 'months', format: timeFormat('%Y-%m') },
-  { property: 'quarters', format: timeFormat('%Y-Q%q') },
-  { property: 'years', format: timeFormat('%Y') },
+  { property: 'minutes', format: utcFormat('%Y-%m-%dT%H:%M') },
+  { property: 'hours', format: utcFormat('%Y-%m-%dT%H') },
+  { property: 'days', format: utcFormat('%Y-%m-%d') },
+  { property: 'weeks', format: utcFormat('%Y-W%V') },
+  { property: 'months', format: utcFormat('%Y-%m') },
+  { property: 'quarters', format: utcFormat('%Y-Q%q') },
+  { property: 'years', format: utcFormat('%Y') },
   { property: 'all', format: () => 'all' },
 ];
 
