@@ -1,6 +1,6 @@
 {
   "name": "multiscale-timeseries",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Small utility for maintaining multi-scale timeseries records",
   "main": "index.js",
   "scripts": {
