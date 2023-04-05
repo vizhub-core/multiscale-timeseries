@@ -23,9 +23,9 @@
   },
   "homepage": "https://github.com/curran/multiscale-timeseries#readme",
   "devDependencies": {
-    "d3-time": "^2.0.0",
-    "mocha": "^8.2.1",
-    "prettier": "^2.2.1"
+    "d3-time": "^3.1.0",
+    "mocha": "^10.2.0",
+    "prettier": "^2.8.7"
   },
   "dependencies": {
     "d3-time-format": "^3.0.0"
